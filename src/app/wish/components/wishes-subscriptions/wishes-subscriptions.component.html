@@ -1,0 +1,16 @@
+<div>
+    <div>
+        <p>En ce moment</p>
+        <p>{{ getSumOfSubscriptions() }} inscriptions</p>
+        <div>
+        </div>
+    </div>
+    <div>
+        <p>Suivez les inscriptions en fonction de leur statut :</p>
+        <p *ngFor="let stat of stats">
+            <span></span>
+            <span>{{ stat.status }}</span>
+            <span>{{ stat.count }}</span>
+        </p>
+    </div>
+</div>
