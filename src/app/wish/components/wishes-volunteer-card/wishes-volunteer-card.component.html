@@ -1,0 +1,30 @@
+<div>
+    <div>
+        <section>
+            <figure>
+                <img src="" alt="">
+            </figure>
+            <span>{{ volunteerWish.id }}</span>
+            <p>Inscrit le : {{ volunteerWish.createdDate | date: 'dd MMMM y'  }}</p>
+        </section>
+        <section>
+            <section>
+                <p>{{ volunteerWish.volunteerProfile.firstname }} {{ volunteerWish.volunteerProfile.lastname }}</p>
+                <p>{{ volunteerWish.volunteerProfile.company.name }}</p>
+            </section>
+            <section>
+                <p>{{ volunteerWish.initiative.title }}</p>
+                <p>{{ volunteerWish.initiative.city }}</p>
+                <p>{{ volunteerWish.coordinatorProfile.firstname }} {{ volunteerWish.coordinatorProfile.lastname }}</p>
+            </section>
+        </section>
+    </div>
+    <div>
+        <section>
+            <p> Statut: <span>{{ volunteerWish.status }}</span></p>
+        </section>
+        <section *ngFor="let entry of volunteerWish.entries" [hidden]="!volunteerWish.entries">
+            <p> Le {{ entry.dateBegin | date: 'dd/MM/yyyy' }}, de {{ entry.dateBegin | date: 'HH:mm' }} à {{ entry.dateEnd | date: 'HH:mm' }} ({{ getHourDifference(entry.dateBegin, entry.dateEnd) }})</p>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div>
+    <wnb-wishes-subscriptions (statusToFilter)="filterByStatus($event)"></wnb-wishes-subscriptions>
+</div>
+<div>
+    <p>La liste de vos volontaires</p>
+    <div *ngFor="let wish of filteredWishes">
+        <wnb-wishes-volunteer-card [volunteerWish]="wish"></wnb-wishes-volunteer-card>
+    </div>
+</div>

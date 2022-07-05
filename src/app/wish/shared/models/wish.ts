@@ -8,8 +8,7 @@ export interface IWish {
     entries?: IEntry[];
 }
 
-interface IVolunteer {
-    identity: IIdentity;
+interface IVolunteer extends IIdentity {
     company: ICompany;
 }
 
@@ -17,8 +16,7 @@ interface ICompany {
     name: string;
 }
 
-interface ICoordinator {
-    identity: IIdentity;
+interface ICoordinator extends IIdentity {
 }
 
 interface IInitiative {
@@ -35,6 +33,6 @@ interface IEntry {
 }
 
 interface IIdentity {
-    firstName: string;
-    lastName: string;
+    firstname: string;
+    lastname: string;
 }

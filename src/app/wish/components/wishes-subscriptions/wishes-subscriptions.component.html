@@ -7,7 +7,7 @@
     </div>
     <div>
         <p>Suivez les inscriptions en fonction de leur statut :</p>
-        <p *ngFor="let stat of stats">
+        <p *ngFor="let stat of stats" [hidden]="stat.count < 1" (click)="sendFilterStatus(stat.status)">
             <span></span>
             <span>{{ stat.status }}</span>
             <span>{{ stat.count }}</span>

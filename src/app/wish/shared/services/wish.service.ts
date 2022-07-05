@@ -1,9 +1,9 @@
+import { IStat } from './../models/stat';
 import { IWish } from './../../shared/models/wish';
-import { Stat } from '../models/stat';
-import { BASE_API_URL, GET_STATS_ENDPOINT, GET_ALL_WISHES_ENDPOINT } from './../../../utils/util.constants';
+import { BASE_API_URL, GET_STATS_ENDPOINT, GET_ALL_WISHES_ENDPOINT } from '../../../utils/utils';
 
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -13,9 +13,9 @@ export class WishService {
 
     constructor(private httpClient: HttpClient) { }
 
-    getAllSubscription(): Observable<Stat[]> {
+    getAllSubscription(): Observable<IStat[]> {
         return this.httpClient
-            .get<Stat[]>(`${BASE_API_URL}${GET_STATS_ENDPOINT}`);
+            .get<IStat[]>(`${BASE_API_URL}${GET_STATS_ENDPOINT}`);
     }
 
     getAllWishes(): Observable<IWish[]> {
