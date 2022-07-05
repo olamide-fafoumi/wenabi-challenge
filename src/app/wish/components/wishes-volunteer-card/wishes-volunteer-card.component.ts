@@ -16,7 +16,6 @@ export class WishesVolunteerCardComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-
     }
 
     getHourDifference(start: string, end: string) {

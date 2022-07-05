@@ -1,0 +1,32 @@
+.status-bubble {
+    width: 159px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #D8D8D8;
+    border-radius: 40px;
+    opacity: 1;
+
+    :nth-child(2) {
+        font-size: 12px;
+    }
+}
+
+.status-bubble-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-count {
+    font-size: 16px;
+}
+
+.status-icon {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 100%;
+}

@@ -1,0 +1,28 @@
+.main-container {
+    width: 993px;
+    height: 2890px;
+    margin: 40px 0 20px;
+
+}
+
+.content-container {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    opacity: 1;
+    padding: 35px 20px 30px;
+}
+
+.header-container {
+
+    p:first-child {
+        font-size: 36px;
+    }
+
+    p:last-child {
+        font-size: 18px;
+    }
+}
+
+hr {
+    margin: 40px 0;
+}

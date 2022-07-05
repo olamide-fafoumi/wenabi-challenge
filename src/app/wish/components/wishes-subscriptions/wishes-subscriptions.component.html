@@ -1,16 +1,19 @@
-<div>
-    <div>
+<div class="main-sub-container">
+    <div class="header-sub-container">
         <p>En ce moment</p>
         <p>{{ getSumOfSubscriptions() }} inscriptions</p>
-        <div>
+        <div class="subs-progress-bar">
         </div>
     </div>
-    <div>
+    <div class="content-sub-container">
         <p>Suivez les inscriptions en fonction de leur statut :</p>
-        <p *ngFor="let stat of stats" [hidden]="stat.count < 1" (click)="sendFilterStatus(stat.status)">
-            <span></span>
-            <span>{{ stat.status }}</span>
-            <span>{{ stat.count }}</span>
-        </p>
+        <div class="status-bubble" *ngFor="let stat of stats" [hidden]="stat.count < 1" (click)="sendFilterStatus(stat.status)">
+            <div class="status-bubble-content">
+                <span class="status-icon"></span>
+                <span>{{ stat.status }}</span>
+                <span class="status-count">{{ stat.count }}</span>
+            </div>
+            
+        </div>
     </div>
 </div>
