@@ -18,3 +18,21 @@
     justify-content: center;
     align-items: center;
 }
+
+hr {
+    width: 1px;
+    height: 100%;
+    border: none;
+    border-left: 1px solid hsla(200, 10%, 50%, 100);
+    margin: 0 25px 0 25px;
+}
+
+.uil-map-marker,
+.uil-arrow-right,
+.uil-user {
+    margin-right: 13px;
+}
+
+.right-content {
+    flex-direction: column;
+}

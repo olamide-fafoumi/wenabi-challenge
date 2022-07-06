@@ -1,31 +1,33 @@
 <div class="main-card-container">
     <div class="left-side-container">
-        <section class="left-content">
+        <div class="left-content">
             <figure>
                 <img [src]="'../../../../assets/imgs/img-'+ volunteerWish.id + '.png'" alt="">
             </figure>
             <span>{{ volunteerWish.id }}</span>
             <p>Inscrit le : {{ volunteerWish.createdDate | date: 'dd MMMM y'  }}</p>
-        </section>
-        <section class="right-content">
-            <section class="volunteer-data">
+        </div>
+        <div class="right-content">
+            <div class="volunteer-data">
                 <p>{{ volunteerWish.volunteerProfile.firstname }} {{ volunteerWish.volunteerProfile.lastname }}</p>
                 <p>{{ volunteerWish.volunteerProfile.company.name }}</p>
-            </section>
-            <section class="wish-addtional-data">
-                <p>{{ volunteerWish.initiative.title }}</p>
-                <p>{{ volunteerWish.initiative.city }}</p>
-                <p>{{ volunteerWish.coordinatorProfile.firstname }} {{ volunteerWish.coordinatorProfile.lastname }}</p>
-            </section>
-        </section>
+            </div>
+            <div class="wish-addtional-data">
+                <p><em class="uil uil-arrow-right"></em>{{ volunteerWish.initiative.title }}</p>
+                <p><em class="uil uil-map-marker"></em>{{ volunteerWish.initiative.city }}</p>
+                <p><em class="uil uil-user"></em>{{ volunteerWish.coordinatorProfile.firstname }} {{ volunteerWish.coordinatorProfile.lastname }}</p>
+            </div>
+        </div>
     </div>
 
+    <hr>
+
     <div class="right-side-container">
-        <section class="wish-status">
+        <div class="wish-status">
             <p> Statut: <span>{{ volunteerWish.status }}</span></p>
-        </section>
-        <section class="wish-entries" *ngFor="let entry of volunteerWish.entries" [hidden]="!volunteerWish.entries">
+        </div>
+        <div class="wish-entries" *ngFor="let entry of volunteerWish.entries" [hidden]="!volunteerWish.entries">
             <p> Le {{ entry.dateBegin | date: 'dd/MM/yyyy' }}, de {{ entry.dateBegin | date: 'HH:mm' }} à {{ entry.dateEnd | date: 'HH:mm' }} ({{ getHourDifference(entry.dateBegin, entry.dateEnd) }})</p>
-        </section>
+        </div>
     </div>
 </div>
