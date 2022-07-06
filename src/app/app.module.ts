@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WishesVolunteerCardComponent } from './wish/components/wishes-volunteer-card/wishes-volunteer-card.component';
-import { registerLocaleData } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 registerLocaleData(localeFr, 'fr');
 
@@ -22,6 +22,7 @@ registerLocaleData(localeFr, 'fr');
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
+        CommonModule
     ],
     providers: [{ provide: LOCALE_ID, useValue: 'fr' }],
     bootstrap: [AppComponent],

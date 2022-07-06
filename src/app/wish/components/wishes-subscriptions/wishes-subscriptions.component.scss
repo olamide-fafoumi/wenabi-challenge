@@ -1,4 +1,4 @@
-.status-bubble {
+.status-bubble-content {
     width: 159px;
     height: 47px;
     display: flex;
@@ -9,24 +9,55 @@
     border: 1px solid #D8D8D8;
     border-radius: 40px;
     opacity: 1;
+    margin: 0 20px 20px 0;
+    padding: 0 20px 0 20px;
+
+    &:hover {
+       background-color: #D8D8D8;
+    }
 
     :nth-child(2) {
         font-size: 12px;
+        margin: 0 35px 0 15px;
     }
 }
 
-.status-bubble-content {
+.status-bubble {
+    width: 80%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .status-count {
     font-size: 16px;
 }
 
-.status-icon {
-    width: 20px;
+.status-icon-red,
+.status-icon-pink,
+.status-icon-orange,
+.status-icon-yellow,
+.status-icon-green {
+    min-width: 20px;
     height: 20px;
-    background-color: red;
     border-radius: 100%;
+}
+
+.status-icon-red {
+    background-color: #FF0000;
+}
+
+.status-icon-pink {
+    background-color: #FF000080;
+}
+
+.status-icon-orange {
+    background-color: #FFC000;
+}
+
+.status-icon-yellow {
+    background-color: #FFC00080;
+}
+
+.status-icon-green {
+    background-color: #92D050;
 }

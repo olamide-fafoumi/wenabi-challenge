@@ -7,13 +7,16 @@
     </div>
     <div class="content-sub-container">
         <p>Suivez les inscriptions en fonction de leur statut :</p>
-        <div class="status-bubble" *ngFor="let stat of stats" [hidden]="stat.count < 1" (click)="sendFilterStatus(stat.status)">
-            <div class="status-bubble-content">
-                <span class="status-icon"></span>
+        <div class="status-bubble">
+            <div class="status-bubble-content" *ngFor="let stat of stats" [hidden]="stat.count < 1" (click)="sendFilterStatus(stat.status)">
+                <span [ngClass]="{'status-icon-red': stat.status === 'Echange',
+                                  'status-icon-pink' : stat.status === 'Candidature',
+                                  'status-icon-orange' : stat.status === 'Date à valider',
+                                  'status-icon-yellow' : stat.status === 'En attente du manager',
+                                  'status-icon-green' : stat.status === 'En cours'}"></span>
                 <span>{{ stat.status }}</span>
                 <span class="status-count">{{ stat.count }}</span>
             </div>
-            
         </div>
     </div>
 </div>
