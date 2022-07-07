@@ -1,5 +1,4 @@
 .status-bubble-content {
-    width: 159px;
     height: 47px;
     display: flex;
     justify-content: center;
@@ -63,5 +62,10 @@
 }
 
 .inscriptions-count {
+    color: #0C0C0C;
     font-size: 40px;
+}
+
+.header-sub-container {
+    font-size: 24px;
 }

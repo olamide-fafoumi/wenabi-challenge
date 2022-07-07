@@ -4,6 +4,10 @@
     display: flex;
 }
 
+.left-side-container {
+    width: 45%;
+}
+
 .main-card-container {
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 30px;
@@ -35,4 +39,83 @@ hr {
 
 .right-content {
     flex-direction: column;
+}
+
+.wish-status-bubble {
+    display: flex;
+    align-items: center;
+}
+
+.wish-status-bubble-content {
+    gap: 10px;
+    margin-left: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 1px 1px 15px #00000029;
+    border: 1px solid #FAFAFA;
+    border-radius: 20px;
+    opacity: 0.75;
+
+    p {
+        font-size: 14px;
+    }
+}
+
+.status-icon-red,
+.status-icon-pink,
+.status-icon-orange,
+.status-icon-yellow,
+.status-icon-green,
+.status-icon-gray {
+    min-width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+
+.status-icon-red {
+    background-color: #FF0000;
+}
+
+.status-icon-pink {
+    background-color: #FF000080;
+}
+
+.status-icon-orange {
+    background-color: #FFC000;
+}
+
+.status-icon-yellow {
+    background-color: #FFC00080;
+}
+
+.status-icon-green {
+    background-color: #92D050;
+}
+
+.status-icon-gray {
+    background-color: #D8D8D8;
+}
+
+.volunteer-name, .wish-addtional-data p {
+    color: #0C0C0C;
+}
+
+.left-content p, .wish-status-bubble p {
+    color: #8C8C8C;
+}
+
+.wish-entries p, .wish-status-bubble-content p{
+    color: #404040;
+}
+
+.volunteer-name {
+    font-size: 16px;
+}
+
+.volunteer-data:last-child, .wish-addtional-data p {
+    font-size: 14px;
 }

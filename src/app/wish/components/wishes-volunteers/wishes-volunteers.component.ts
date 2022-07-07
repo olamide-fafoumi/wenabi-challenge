@@ -29,8 +29,10 @@ export class WishesVolunteersComponent implements OnInit {
     }
 
     filterByStatus(status: string) {
-        this.filteredWishes = this.wishes.slice().filter(wish =>
-            wish.status.toLowerCase().includes(status.toLowerCase())
-        );
+        if (status !== 'all')
+            this.filteredWishes = this.wishes.slice().filter(wish =>
+                wish.status.toLowerCase().includes(status.toLowerCase()));
+        else
+            this.filteredWishes = this.wishes;
     }
 }

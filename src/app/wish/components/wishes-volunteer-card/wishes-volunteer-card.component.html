@@ -9,7 +9,9 @@
         </div>
         <div class="right-content">
             <div class="volunteer-data">
-                <p>{{ volunteerWish.volunteerProfile.firstname }} {{ volunteerWish.volunteerProfile.lastname }}</p>
+                <p class="volunteer-name">
+                    <strong>{{ volunteerWish.volunteerProfile.firstname }} {{ volunteerWish.volunteerProfile.lastname }}</strong>
+                </p>
                 <p>{{ volunteerWish.volunteerProfile.company.name }}</p>
             </div>
             <div class="wish-addtional-data">
@@ -23,8 +25,17 @@
     <hr>
 
     <div class="right-side-container">
-        <div class="wish-status">
-            <p> Statut: <span>{{ volunteerWish.status }}</span></p>
+        <div class="wish-status-bubble">
+            <p> Statut:</p>
+            <div class="wish-status-bubble-content">
+                <span [ngClass]="{'status-icon-red': volunteerWish.status === 'Echange',
+                                                    'status-icon-pink' : volunteerWish.status === 'Candidature',
+                                                    'status-icon-orange' : volunteerWish.status === 'Date à valider',
+                                                    'status-icon-yellow' : volunteerWish.status === 'En attente du manager',
+                                                    'status-icon-gray' : volunteerWish.status === 'Annulé / refusé / non finalisé',
+                                                    'status-icon-green' : volunteerWish.status === 'En cours' || volunteerWish.status === 'A participé'}"></span>
+                <p>{{ volunteerWish.status }}</p>
+            </div>
         </div>
         <div class="wish-entries" *ngFor="let entry of volunteerWish.entries" [hidden]="!volunteerWish.entries">
             <p> Le {{ entry.dateBegin | date: 'dd/MM/yyyy' }}, de {{ entry.dateBegin | date: 'HH:mm' }} à {{ entry.dateEnd | date: 'HH:mm' }} ({{ getHourDifference(entry.dateBegin, entry.dateEnd) }})</p>

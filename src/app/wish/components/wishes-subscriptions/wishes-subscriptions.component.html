@@ -17,6 +17,7 @@
                 <span>{{ stat.status }}</span>
                 <span class="status-count">{{ stat.count }}</span>
             </div>
+            <p [hidden]="stats.length < 1" (click)="resetFilter()">Afficher tout</p>
         </div>
     </div>
 </div>

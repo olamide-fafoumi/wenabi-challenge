@@ -35,4 +35,8 @@ export class WishesSubscriptionsComponent implements OnInit {
     sendFilterStatus(status: string) {
         this.statusToFilter.emit(status);
     }
+
+    resetFilter() {
+        this.statusToFilter.emit('all');
+    }
 }
