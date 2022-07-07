@@ -12,8 +12,6 @@
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 30px;
     opacity: 1;
-    width: 955px;
-    height: 251px;
 }
 
 .left-content {
@@ -29,7 +27,6 @@
 
 .vertical-divider {
     width: 1px;
-    height: 100%;
     border: none;
     border-left: 1px solid hsla(200, 10%, 50%, 100);
     margin: 0 25px 0 25px;
@@ -129,5 +126,35 @@
 
     &:last-child hr {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .main-card-container {
+        flex-direction: column;
+    }
+
+    .left-side-container {
+        width: auto;
+        gap: 50px;
+    }
+
+    .right-side-container {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .left-side-container {
+        flex-direction: column;
+    }
+
+    .right-content {
+        margin-left: 20px;
+    }
+
+    .left-side-container {
+        width: auto;
+        gap: 0px;
     }
 }

@@ -69,3 +69,13 @@
 .header-sub-container {
     font-size: 24px;
 }
+
+.status-bubble p {
+    text-decoration: underline;
+    color: #8C8C8C;
+    align-self: center;
+}
+
+.status-bubble-content, .status-bubble p {
+    cursor: pointer;
+}
