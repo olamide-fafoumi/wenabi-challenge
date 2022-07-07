@@ -18,6 +18,14 @@ export class WishesVolunteerCardComponent implements OnInit {
     ngOnInit() {
     }
 
+    /**
+     * Takes two strings, converts them to moment objects, calculates the difference between them,
+     * converts the difference to hours and minutes, and returns a string with the hours and minutes
+     * 
+     * @param {string} start - the start time of the event
+     * @param {string} end - The end time of the event.
+     * @returns The difference between two times in hours and minutes.
+     */
     getHourDifference(start: string, end: string) {
         const startTime = moment(start);
         const endTime = moment(end);

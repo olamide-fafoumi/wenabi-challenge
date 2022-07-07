@@ -28,6 +28,11 @@ export class WishesVolunteersComponent implements OnInit {
             });
     }
 
+    /**
+     * Filters the list of volunteers by their status
+     * 
+     * @param {string} status - the status to filter by
+     */
     filterByStatus(status: string) {
         if (status !== 'all')
             this.filteredWishes = this.wishes.slice().filter(wish =>
