@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <hr>
+    <hr class="vertical-divider">
 
     <div class="right-side-container">
         <div class="wish-status-bubble">
@@ -39,6 +39,7 @@
         </div>
         <div class="wish-entries" *ngFor="let entry of volunteerWish.entries" [hidden]="!volunteerWish.entries">
             <p> Le {{ entry.dateBegin | date: 'dd/MM/yyyy' }}, de {{ entry.dateBegin | date: 'HH:mm' }} à {{ entry.dateEnd | date: 'HH:mm' }} ({{ getHourDifference(entry.dateBegin, entry.dateEnd) }})</p>
+            <hr class="horizontal-divider">
         </div>
     </div>
 </div>

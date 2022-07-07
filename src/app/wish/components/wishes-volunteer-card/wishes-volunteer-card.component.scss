@@ -21,9 +21,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    p {
+        font-size: 14px;
+    }
 }
 
-hr {
+.vertical-divider {
     width: 1px;
     height: 100%;
     border: none;
@@ -116,6 +120,14 @@ hr {
     font-size: 16px;
 }
 
-.volunteer-data:last-child, .wish-addtional-data p {
+.volunteer-data:last-child, .wish-addtional-data p, .wish-entries p {
     font-size: 14px;
+}
+
+.wish-entries {
+    width: fit-content;
+
+    &:last-child hr {
+        display: none;
+    }
 }
